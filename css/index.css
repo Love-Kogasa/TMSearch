@@ -1,0 +1,48 @@
+@import "https://cdn.bootcdn.net/ajax/libs/milligram/1.4.1/milligram.css";
+
+.navbar {
+  position: fixed; top: 0px; left: 0px;
+  display: block; width: 100vw;
+  text-align: center; z-index: 10;
+  border-bottom: 2px solid #0063EB;
+  font-size: 150%; font-weight: bold;
+  background-color: #FFF;
+}
+
+button {
+  background-color: #0063EB;
+  border: 1px solid #004FBB;
+}
+
+.container {
+  margin: 5vw;
+}
+
+.title {
+  font-size: 160%;
+}
+
+.description {
+  font-size: 90%;
+  color: #555;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 16em;
+  display: inline-block;
+}
+
+#modContent, .download-table {
+  max-height: 90vh;
+  overflow-y: auto;
+  font-size: 90%;
+}
+
+.icon {
+  border-radius: 5%;
+  height: 3ch;
+  margin-right: 1ch;
+  margin-bottom: -0.5ch;
+}

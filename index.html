@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/index.css" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="hooks.js"></script>
+    <script src="js/request.js"></script>
+    <script src="js/tmod.js"></script>
+    <script src="js/index.js"></script>
+    <title>TMSearch</title>
+  </head>
+  <body>
+    <div class="navbar" onclick="window.location.href = ''">
+      <img src="favicon.ico" style="height: 2.5ch; margin-bottom: -0.5ch;"> TMSearch
+    </div>
+    <br>
+    <div class="container">
+      <blockquote><i>
+        TMSearch暂不支持其他语言哦)<br>
+        非国产Mod请使用英文搜索<br>
+        开发者: <a href="https://b23.tv/fWoD1y1">比例比例</a> 仓库: <a href="https://github.com/Love-Kogasa/TMSearch">GitHub</a> 支持维护: <a href="css/wepay.png">WePay</a><br>
+        代码屎山轻点喷<br>
+        !FREE !PALESTANE!(解放 巴勒斯坦)<br>
+        (如果需要，请提出issue, <noscript>您的浏览器不支持脚本，无法使用本站点</noscript>候补)
+      </i></blockquote>
+      <div class="title">TMSearch</div>
+      <p class="description"><i>搜索你想找的Mod</i></p>
+      <input placeholder="模组信息" type="text" id="keyword">
+      <button id="search">Search</button>
+      <input type="checkbox" id="safetySearch" checked> 只从tmodloader-mod标签内容中获取
+      <div id="modContent">
+        
+      </div>
+    </div>
+  </body>
+</html>

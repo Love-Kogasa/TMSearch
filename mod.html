@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/index.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.12/marked.min.js" integrity="sha512-rCQgmUulW6f6QegOvTntKKb5IAoxTpGVCdWqYjkXEpzAns6XUFs8NKVqWe+KQpctp/EoRSFSuykVputqknLYMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-base64@3.7.7/base64.min.js"></script>
+    <script src="hooks.js"></script>
+    <script src="js/terrariaCode.js"></script>
+    <script src="js/request.js"></script>
+    <script src="js/gitfs.js"></script>
+    <script src="js/active.js"></script>
+    <script src="js/viewer.js"></script>
+    <title>TMSearch</title>
+  </head>
+  <body>
+    <div class="navbar" onclick="window.location.href = './index.html'">
+      <img src="favicon.ico" style="height: 2.5ch; margin-bottom: -0.5ch;"> TMSearch
+    </div>
+    <br>
+    <div class="container">
+      <div class="title" id="name">Loading...</div>
+      <i><p class="description" id="owner">Loading...</p></i>
+      <blockquote id="description">Description(仓库简介)</blockquote>
+      <pre id="inModDescription" style="padding: 1em; font-size: 90%;">Mod介绍</pre>
+      <div class="title">Mod文件列表</div>
+      <p class="description"><i>本站不提供源码文件</i></p>
+      <input type="checkbox" id="mirror"> 使用Github镜像(bgithub)作为下载源(更快)
+      <table class="download-table">
+        <thead>
+          <tr>
+            <th>文件名(点击下载)</th>
+            <th>上传介绍</th>
+            <th>release版本</th>
+          </tr>
+        </thead>
+        <tbody id="downloads">
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
