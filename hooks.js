@@ -12,7 +12,6 @@ window.onRequest = function( url, option, refuse ){
     if( siteData ){
       refuse( JSON.parse( siteData ) )
     } else urlTmp.push( url )
-    verify( url, option, "token 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" )
   } catch( err ){
     swal( "提示TIP", "站点使用了localStorage来优化站点使用效率，如果您的浏览器不支持LocalStorage或将其禁用，此功能将不会正常运行\n另外，一次性搜索结果过多也会导致此问题", "info" )
   }
