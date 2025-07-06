@@ -20,7 +20,7 @@ window.onload = async function(){
   keyword.oninput = function( notCheck ){
     if( safetySearch.checked || notCheck === true ){
       mods.forEach(function( mod ){
-        if( (mod.name + mod.description).includes( keyword.value ) ){
+        if( (mod.name + mod.description).toLowerCase().includes( keyword.value.toLowerCase() ) ){
           mod.show()
         } else mod.hide()
       })
