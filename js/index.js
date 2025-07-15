@@ -11,10 +11,11 @@ window.onload = async function(){
     }
   }
   var mods = [], unsafeMods = []
+  var whiteList = JSON.parse( (await request( "./whiteList.json" )).body )
   var {body: modDatasDefault} = await searchRepo( "", {
     topic: "tmodloader-mod"
   })
-  for( let mod of modDatasDefault.items ){
+  for( let mod of modDatasDefault.items.concat( whiteList ) ){
     mods.push( new TMod( mod ) )
   }
   keyword.oninput = function( notCheck ){
