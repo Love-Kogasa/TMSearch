@@ -37,10 +37,6 @@ window.onload = async function(){
       } else {
         swal( "提示", "该模式下搜索速度较(非常)慢，请耐心等待", "warning" )
         // 更新列表
-        unsafeMods.forEach(function( mod ){
-          modContent.removeChild( mod.element )
-        })
-        unsafeMods = []
         keyword.oninput( true )
         var items = (await searchRepo( keyword.value )).body.items 
         if( items.length > (window.searchMaxResult || 20) ){
@@ -50,10 +46,7 @@ window.onload = async function(){
         for( let item of items ){
           if( typeof window.onModCheck === "function" )
             if( window.onModCheck( item ) === true ) continue
-          if( await TMod.isTMod( item ) ) unsafeMods.push( new TMod( item ) )
-        }
-        if( unsafeMods.length === 0 ){
-          swal( "看起来有一些问题呢", "没有找到您想找的mod，请更换更详细的提示词，或使用英文进行搜索", "error" )
+          if( await TMod.isTMod( item ) ) mods.push( new TMod( item ) )
         }
       }
     }
