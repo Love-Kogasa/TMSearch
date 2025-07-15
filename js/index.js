@@ -18,6 +18,11 @@ window.onload = async function(){
   for( let mod of modDatasDefault.items.concat( whiteList ) ){
     mods.push( new TMod( mod ) )
   }
+  function inWhiteList( item ){
+    for( let mod of mods )
+      if( mod.name === item.name ) return true
+    return false
+  }
   keyword.oninput = function( notCheck ){
     if( safetySearch.checked || notCheck === true ){
       mods.forEach(function( mod ){
@@ -46,7 +51,7 @@ window.onload = async function(){
         for( let item of items ){
           if( typeof window.onModCheck === "function" )
             if( window.onModCheck( item ) === true ) continue
-          if( await TMod.isTMod( item ) ) mods.push( new TMod( item ) )
+          if( await TMod.isTMod( item ) && !inWhiteList( item ) ) mods.push( new TMod( item ) )
         }
       }
     }
